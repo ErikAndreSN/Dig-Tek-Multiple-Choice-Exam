@@ -26,7 +26,7 @@ const quizData = [
     d: "128",
     correct: "b",
   },
-  /*{
+  {
     question: "Hva er det heksadesimale tallet for binærtallet 1111 0000?",
     a: "0xA0",
     b: "0xF0",
@@ -51,14 +51,7 @@ const quizData = [
     d: "256",
     correct: "c",
   },
-  {
-    question: "Hva er -58 i binært med 8-bit presisjon og toerkomplement?",
-    a: "1110 0010",
-    b: "1100 0110",
-    c: "1111 0101",
-    d: "1100 0000",
-    correct: "a",
-  },
+
   {
     question: "Hva er et overflow i binær aritmetikk?",
     a: "Når et tall blir for stort for den tilgjengelige bitlengden",
@@ -788,7 +781,7 @@ const quizData = [
     d: "En tabell over MAC-adresser",
     correct: "b",
   },
-  */ {
+   {
     question: "Hva er fordelen med en selvlærende switch?",
     a: "Den lagrer passord for nettverkssikkerhet",
     b: "Den lagrer MAC-adresser og optimaliserer dataruting innenfor LAN",
