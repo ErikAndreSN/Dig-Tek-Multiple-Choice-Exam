@@ -8,7 +8,7 @@ body {
   flex-direction: column; /* For å stable #quiz og #button-container */
   justify-content: center;
   align-items: center;
-  background-image: url("./bilder/Light.jpg"); /* Bruker bildet fra bilder-mappen */
+  background-image: url("/Light.jpg"); /* Bruker bildet fra bilder-mappen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +16,8 @@ body {
 
 /* Quiz container styling */
 #quiz {
-  background-image: url("./bilder/Light.jpg");
+background-image: url("/Light.jpg");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -93,7 +94,6 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
   opacity: 0.2;
   z-index: -1;
 }
