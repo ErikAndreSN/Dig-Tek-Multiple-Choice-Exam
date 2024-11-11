@@ -880,15 +880,17 @@ function nextQuestion() {
   if (selectedAnswer === currentQuizData.correct) {
     score++;
     quiz.innerHTML = `
-      <div class="result-box">
-        <h3>Korrekt!</h3>
-        <p><strong>Spørsmål:</strong> ${currentQuizData.question}</p>
-        <p class="correct-answer"><strong>Riktig svar:</strong> ${
-          currentQuizData[currentQuizData.correct]
-        }</p>
-      </div>
-      <button class="next-btn" id="next">Neste</button>
-    `;
+            <div class="result-box">
+                <h3>Korrekt!</h3>
+                <p><strong>Spørsmål:</strong> ${currentQuizData.question}</p>
+                <p style="background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 10px; border-radius: 5px;">
+                    <strong>Riktig svar:</strong> ${
+                      currentQuizData[currentQuizData.correct]
+                    }
+                </p>
+            </div>
+            <button class="next-btn" id="next">Neste</button>
+        `;
   } else {
     // Legg til feilsvaret i listen
     wrongAnswers.push({
@@ -898,18 +900,20 @@ function nextQuestion() {
     });
 
     quiz.innerHTML = `
-      <div class="result-box">
-        <h3>Feil svar</h3>
-        <p><strong>Spørsmål:</strong> ${currentQuizData.question}</p>
-        <p class="wrong-answer"><strong>Ditt svar:</strong> ${
-          currentQuizData[selectedAnswer]
-        }</p>
-        <p class="correct-answer"><strong>Riktig svar:</strong> ${
-          currentQuizData[currentQuizData.correct]
-        }</p>
-      </div>
-      <button class="next-btn" id="next">Neste</button>
-    `;
+            <div class="result-box">
+                <h3>Feil svar</h3>
+                <p><strong>Spørsmål:</strong> ${currentQuizData.question}</p>
+                <p style="background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 10px; border-radius: 5px;">
+                    <strong>Ditt svar:</strong> ${
+                      currentQuizData[selectedAnswer]
+                    }
+                </p>
+                <p><strong>Riktig svar:</strong> ${
+                  currentQuizData[currentQuizData.correct]
+                }</p>
+            </div>
+            <button class="next-btn" id="next">Neste</button>
+        `;
   }
 
   // Legger til en event listener for "Neste"-knappen for å gå videre
