@@ -853,8 +853,28 @@ function getSelectedAnswer() {
 }*/
 
 // Neste spørsmål-funksjon, viser riktig svar umiddelbart
+let answerSelected = false; // Variabel for å holde styr på om et svar er valgt og vises
+
+// Funksjon for å hente valgt svar og sette tilstanden
+function getSelectedAnswer() {
+  const answers = quiz.getElementsByTagName("input");
+  for (let i = 0; i < answers.length; i++) {
+    if (answers[i].checked) {
+      return answers[i].value.toLowerCase();
+    }
+  }
+  return null;
+}
+
+// Neste spørsmål-funksjon
 function nextQuestion() {
   const selectedAnswer = getSelectedAnswer();
+
+  // Sjekk om brukeren prøver å sende svar etter å ha sett resultatet
+  if (answerSelected) {
+    alert("Vennligst trykk Neste!");
+    return;
+  }
 
   if (selectedAnswer === null) {
     alert("Vennligst velg et svar!");
@@ -901,6 +921,8 @@ function nextQuestion() {
         `;
   }
 
+  answerSelected = true; // Sett til true når resultatet vises
+
   // Legger til en event listener for "Neste"-knappen for å gå videre
   document.getElementById("next").onclick = goToNextQuestion;
 }
@@ -908,7 +930,7 @@ function nextQuestion() {
 // Funksjon for å gå videre til neste spørsmål
 function goToNextQuestion() {
   currentQuestion++;
-  currentWrongAnswer = 0;
+  answerSelected = false; // Tilbakestill til false når vi går til neste spørsmål
 
   if (currentQuestion < quizData.length) {
     loadQuiz();
