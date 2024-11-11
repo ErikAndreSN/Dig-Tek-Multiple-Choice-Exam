@@ -51,7 +51,14 @@ const quizData = [
     d: "256",
     correct: "c",
   },
-
+  {
+    question: "Hva er -58 i binært med 8-bit presisjon og toerkomplement?",
+    a: "1110 0010",
+    b: "1100 0110",
+    c: "1111 0101",
+    d: "1100 0000",
+    correct: "a",
+  },
   {
     question: "Hva er et overflow i binær aritmetikk?",
     a: "Når et tall blir for stort for den tilgjengelige bitlengden",
@@ -105,60 +112,60 @@ const quizData = [
   },
   {
     question: "Hva er fordelen med vektorgrafikk i forhold til bitmap?",
-    a: "Vektorgrafikk kan skaleres uten tap av kvalitet",
-    b: "Bitmap tar mindre plass",
+    a: "Bitmap tar mindre plass",
+    b: "Vektorgrafikk kan skaleres uten tap av kvalitet",
     c: "Vektorgrafikk har høyere oppløsning",
     d: "Bitmap kan enkelt lagres som tekst",
-    correct: "a",
+    correct: "b",
   },
   {
     question:
       'Hva betyr "lossy" komprimering, og i hvilke formater brukes det?',
-    a: "En komprimering der noe informasjon går tapt, brukes i JPEG, MP3",
-    b: "En komprimering uten tap av informasjon, brukes i PNG, GIF",
-    c: "En komprimeringsmetode for vektorgrafikk",
-    d: "En metode for å kryptere multimediafiler",
-    correct: "a",
+    a: "En komprimering uten tap av informasjon, brukes i PNG, GIF",
+    b: "En komprimeringsmetode for vektorgrafikk",
+    c: "En metode for å kryptere multimediafiler",
+    d: "En komprimering der noe informasjon går tapt, brukes i JPEG, MP3",
+    correct: "d",
   },
   {
     question: "Hva står MP3 for, og hva brukes det til?",
-    a: "MPEG Audio Layer 3, et komprimert lydformat",
-    b: "Multimedia Processor 3, et grafikkformat",
-    c: "Motion Picture 3, et videoformat",
+    a: "Multimedia Processor 3, et grafikkformat",
+    b: "Motion Picture 3, et videoformat",
+    c: "MPEG Audio Layer 3, et komprimert lydformat",
     d: "MPEG Picture 3, et bildefilformat",
-    correct: "a",
+    correct: "c",
   },
   {
     question: "Hva er forskjellen mellom rastergrafikk og vektorgrafikk?",
-    a: "Rastergrafikk består av piksler, mens vektorgrafikk består av geometriske former",
-    b: "Vektorgrafikk har lavere oppløsning enn rastergrafikk",
+    a: "Vektorgrafikk kan ikke lagres som bildefiler",
+    b: "Rastergrafikk består av piksler, mens vektorgrafikk består av geometriske former",
     c: "Rastergrafikk er lettere å skalere uten tap av kvalitet",
-    d: "Vektorgrafikk kan ikke lagres som bildefiler",
-    correct: "a",
+    d: "Vektorgrafikk har lavere oppløsning enn rastergrafikk",
+    correct: "b",
   },
   {
     question: "Hva er BMP-formatet i bilder, og hva brukes det til?",
-    a: "Et ukomprimert bildefilformat som brukes for høy kvalitet",
-    b: "Et komprimert filformat som brukes for å spare lagringsplass",
-    c: "Et format for vektorbaserte bilder",
-    d: "Et format for animerte bilder",
-    correct: "a",
+    a: "Et komprimert filformat som brukes for å spare lagringsplass",
+    b: "Et format for vektorbaserte bilder",
+    c: "Et format for animerte bilder",
+    d: "Et ukomprimert bildefilformat som brukes for høy kvalitet",
+    correct: "d",
   },
   {
     question: "Hva er sampling rate, og hvordan påvirker den lydkvaliteten?",
-    a: "Antall ganger per sekund lyd blir målt, høyere sampling rate gir bedre kvalitet",
-    b: "Antall kanaler som spilles av i en lydfil",
-    c: "Størrelsen på lydfilen i kilobyte",
-    d: "Tidsforskjellen mellom to lydspor i en fil",
-    correct: "a",
+    a: "Antall kanaler som spilles av i en lydfil",
+    b: "Størrelsen på lydfilen i kilobyte",
+    c: "Tidsforskjellen mellom to lydspor i en fil",
+    d: "Antall ganger per sekund lyd blir målt, høyere sampling rate gir bedre kvalitet",
+    correct: "d",
   },
   {
     question: "Hva står SVG for, og hva brukes det til?",
-    a: "Scalable Vector Graphics, brukt til vektorbilder som kan skaleres uten tap av kvalitet",
-    b: "Secure Video Graphics, brukt til å beskytte bilder på nettet",
+    a: "Secure Video Graphics, brukt til å beskytte bilder på nettet",
+    b: "Scalable Vector Graphics, brukt til vektorbilder som kan skaleres uten tap av kvalitet",
     c: "Standard Vector Graph, brukt til å lage grafikk i 3D",
     d: "Small Vector Graph, brukt til å lage små bildefiler",
-    correct: "a",
+    correct: "b",
   },
 
   // Modul 4: Datamaskinen
@@ -287,14 +294,7 @@ const quizData = [
     d: "Å styre nettverkskommunikasjon",
     correct: "a",
   },
-  {
-    question: 'Hva er "paging" i et operativsystem?',
-    a: "En metode for å bytte data mellom RAM og harddisk",
-    b: "En teknikk for å administrere eksterne lagringsenheter",
-    c: "En metode for å kryptere filer",
-    d: "En teknikk for å øke prosessorhastigheten",
-    correct: "a",
-  },
+
   {
     question: "Hva er forskjellen mellom prosesser og tråder?",
     a: "Tråder er lettere vektige og deler samme minne, mens prosesser har eget minne",
@@ -663,9 +663,9 @@ const quizData = [
     correct: "a",
   },
 
-  //Modul 10:
+  //Modul 10 Nettverk - Linklaget:
   {
-    module: "Modul 8: Transportlaget",
+    module: "Modul 10 Nettverk - Linklaget:",
     question: "Hva er linklagets hovedansvar?",
     a: "Å transportere data fra en node til en annen over en link",
     b: "Å sikre datakryptering",
@@ -781,7 +781,7 @@ const quizData = [
     d: "En tabell over MAC-adresser",
     correct: "b",
   },
-   {
+  {
     question: "Hva er fordelen med en selvlærende switch?",
     a: "Den lagrer passord for nettverkssikkerhet",
     b: "Den lagrer MAC-adresser og optimaliserer dataruting innenfor LAN",
@@ -839,7 +839,7 @@ function getSelectedAnswer() {
 }
 
 // Neste spørsmål-funksjon, bruker alert og if-else for feilmeldinger
-function nextQuestion() {
+/*function nextQuestion() {
   const selectedAnswer = getSelectedAnswer();
 
   if (selectedAnswer === null) {
@@ -859,6 +859,67 @@ function nextQuestion() {
   }
 
   currentQuestion++;
+
+  if (currentQuestion < quizData.length) {
+    loadQuiz();
+  } else {
+    showResults();
+  }
+}*/
+
+// Neste spørsmål-funksjon, viser riktig svar umiddelbart
+function nextQuestion() {
+  const selectedAnswer = getSelectedAnswer();
+
+  if (selectedAnswer === null) {
+    alert("Vennligst velg et svar!");
+    return;
+  }
+
+  const currentQuizData = quizData[currentQuestion];
+  if (selectedAnswer === currentQuizData.correct) {
+    score++;
+    quiz.innerHTML = `
+      <div class="result-box">
+        <h3>Korrekt!</h3>
+        <p><strong>Spørsmål:</strong> ${currentQuizData.question}</p>
+        <p class="correct-answer"><strong>Riktig svar:</strong> ${
+          currentQuizData[currentQuizData.correct]
+        }</p>
+      </div>
+      <button class="next-btn" id="next">Neste</button>
+    `;
+  } else {
+    // Legg til feilsvaret i listen
+    wrongAnswers.push({
+      question: currentQuizData.question,
+      userAnswer: currentQuizData[selectedAnswer],
+      correctAnswer: currentQuizData[currentQuizData.correct],
+    });
+
+    quiz.innerHTML = `
+      <div class="result-box">
+        <h3>Feil svar</h3>
+        <p><strong>Spørsmål:</strong> ${currentQuizData.question}</p>
+        <p class="wrong-answer"><strong>Ditt svar:</strong> ${
+          currentQuizData[selectedAnswer]
+        }</p>
+        <p class="correct-answer"><strong>Riktig svar:</strong> ${
+          currentQuizData[currentQuizData.correct]
+        }</p>
+      </div>
+      <button class="next-btn" id="next">Neste</button>
+    `;
+  }
+
+  // Legger til en event listener for "Neste"-knappen for å gå videre
+  document.getElementById("next").onclick = goToNextQuestion;
+}
+
+// Funksjon for å gå videre til neste spørsmål
+function goToNextQuestion() {
+  currentQuestion++;
+  currentWrongAnswer = 0;
 
   if (currentQuestion < quizData.length) {
     loadQuiz();
